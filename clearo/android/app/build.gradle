@@ -1,0 +1,24 @@
+// Add NDK configuration inside the android block
+
+android {
+    // ...existing code...
+    
+    // Add this block to specify NDK version
+    ndkVersion "21.4.7075529" // Use an older, stable NDK version
+    
+    // Alternatively, if you need to use a specific NDK path:
+    // ndkPath "C:/Users/Kebu/AppData/Local/Android/sdk/ndk/21.4.7075529"
+    
+    // ...existing code...
+    
+    defaultConfig {
+        applicationId "com.example.clearo" // Ensure this matches the package name in AndroidManifest.xml
+        minSdkVersion 21
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // Ensure multidex is enabled if needed
+    multiDexEnabled true
+}
